@@ -3,30 +3,34 @@
 * Workshop combining p5.js and ComfyUI, via RunComfy.com
 * Golan Levin, 16 October 2025 - at RISD CTC
 
+![spoiler!](img/screenshot.png)
+
 ---
 
 ## Overview
 
-This is a workshop for combining p5.js and ComfyUI, deployed using cloud-based GPU servers at RunComfy.com. In this workshop, the canvas produced by simple generative code in p5.js is used to guide an img2img algorithm — effectively treating Stable Diffusion as a filter or renderer. The workshop is based on the [p5.comfyui-helper](https://github.com/gohai/p5.comfyui-helper) by [Gottfried Haider](https://github.com/gohai), the [comfyui-p5js-node](https://github.com/tracerstar/comfyui-p5js-node) by Benjamin Fox, and invaluable help from CMU BCSA student, [Lorie Chen](https://github.com/ylchen333/p5.comfyui-helper/tree/main?tab=readme-ov-file). For related work, see also my [p5-in-comfyui](https://github.com/golanlevin/p5-in-comfyui), [image analysis](https://github.com/golanlevin/60-212/tree/main/lectures/comfy/image_analysis), and [image synthesis](https://github.com/golanlevin/60-212/tree/main/lectures/comfy/image_synthesis) lessons. This workshop was initially prepared for a presentation to undergraduates in RISD's Computation, Technology, and Culture (CTC) program in October, 2025. 
+This is a workshop for combining p5.js and ComfyUI, deployed using cloud-based GPU servers at RunComfy.com. In this workshop, the canvas produced by simple generative code in p5.js is used to guide an img2img algorithm — effectively treating Stable Diffusion as a filter or renderer. The workshop is based on the [p5.comfyui-helper](https://github.com/gohai/p5.comfyui-helper) by [Gottfried Haider](https://github.com/gohai) *(thanks to @gohai for a great resource!)*, the [comfyui-p5js-node](https://github.com/tracerstar/comfyui-p5js-node) by Benjamin Fox, and invaluable help from CMU BCSA student, [Lorie Chen](https://github.com/ylchen333/p5.comfyui-helper/tree/main?tab=readme-ov-file). For related work, see also my [p5-in-comfyui](https://github.com/golanlevin/p5-in-comfyui), [image analysis](https://github.com/golanlevin/60-212/tree/main/lectures/comfy/image_analysis), and [image synthesis](https://github.com/golanlevin/60-212/tree/main/lectures/comfy/image_synthesis) lessons. This workshop was initially prepared for a presentation to undergraduates in RISD's Computation, Technology, and Culture (CTC) program in October, 2025. 
 
 ---
 
 ## ComfyUI Setup 
 
-These are instructions for configuring RunComfy.com to provide stable-diffusion image synthesis for the provided p5.js sketch example. 
+These are instructions for configuring [RunComfy.com](https://www.runcomfy.com/) to provide stable-diffusion image synthesis for the provided [p5.js sketch example](https://editor.p5js.org/golan/sketches/hDteUa1V_). 
 
-* Make an account at RunComfy.com if you don't already have one. 
-* **Click** on the *Launch App* button in the upper right.
-* **Select** the *ComfyUI-NodesLoaded* workflow; then *Launch & Build* a Medium machine ($0.99/hour).
-* **Go** to the "C" menu in the upper left and select ⚙️ Settings. This will open a Settings control panel interface. 
+* **Make** an account at RunComfy.com if you don't already have one. The free "Hobby" trial offers a few credits, but you may need to **load** up your account with a few bucks to get real work done. 
+* **Go** to [https://www.runcomfy.com/comfyui-workflows](https://www.runcomfy.com/comfyui-workflows).
+* **Select** the *ComfyUI-NodesLoaded* workflow; then *Launch & Build* a Medium machine ($0.99/hour), and click *Launch*. **Hold on**; it will take 3-5 minutes to spin up a server.
+* **Go** to the "**C**" menu in the upper left and select ⚙️ Settings. This will open a Settings control panel interface. 
 * Under Settings→Comfy→Dev Mode, **enable** Dev Mode ("Enable dev mode options (API save, etc.)"), by turning the switch to ON (blue).
-* Under Settings→Lite Graph→Node (scroll down), **set** "Node ID badge mode" to “Show All”
+* Under Settings→Lite Graph→Node (scroll down), **set** "Node ID badge mode" to “Show All”.
 * **Test** the network by clicking ▶️ Run. After a few seconds (it's loading models), it should generate a purple bottle image.
 * (This isn't critical but) **Drag** [this workflow image](comfy/workflow_img2img_image.png) or [this workflow json file](comfy/workflow_img2img_api.json) into the RunComfy window. You should be able now to run the exact workflow that we will use from p5.js.
-* **Copy** the URL for the RunComfy server from your browser window. It should look something like "https://www.runcomfy.com/comfyui/94de82a2-9ac3-4147-b3f4-3652c15d7d96/servers/eae46885-0d2b-4555-9a3c-27263c7a56ab". 
+* **Copy** the URL for the active RunComfy server from your browser window. It should look something like "https://www.runcomfy.com/comfyui/94de82a2-9ac3-4147-b3f4-3652c15d7d96/servers/eae46885-0d2b-4555-9a3c-27263c7a56ab".
+	* If you prefer the old-style (2024) ComfyUI interface, go to Settings→Menu - Disabled.
+	* If you need to export a new workflow for the p5 sketch, be sure to save the workflow with: *Save (API Format)*.
 * **Go** to the demonstration p5.js app [here](https://editor.p5js.org/golan/sketches/hDteUa1V_). **Paste** the RunComfy server URL into the code for the variable, `const RunComfyURL = `, so that the sketch can find your server. 
-* **Run** the demonstration app, you should see a still life of some beetles.
-* Don't forget to **stop** the server once you're done, by pressing the stop button.
+* **Run** the demonstration sketch; you should see a still life of some beetles.
+* Don't forget to **stop** the server once you're done, by pressing the ⏹️ stop button.
 
 ---
 
