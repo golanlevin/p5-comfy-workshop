@@ -76,7 +76,8 @@ These are instructions for configuring [RunComfy.com](https://www.runcomfy.com/)
 	* **Consider**: foreground, middle-ground, and background layers; natural and human-made features; utopia, dystopia; heaven, hell; outside (exterior) scenes, vs. interior ones.
 	* **Possible variation**: Populate your landscape with one or more of the “three verticals” (people, trees, and buildings): according to Jungian psychology, these are the defining psychological features of landscapes.
 	* **Possible variation**: Consider the point of view: first-person (as if you were driving); train window; satellite/bird's-eye view.
-	* *(Here's a somewhat [overcomplicated example](https://editor.p5js.org/golan/sketches/Vzn7OHiwI).)*
+	* IGNORE THIS: *(Here's a somewhat [overcomplicated example](https://editor.p5js.org/golan/sketches/Vzn7OHiwI).)*
+	* Here's a basic example you could get started with: [a statue of a plinth in a park](https://editor.p5js.org/golan/sketches/0wCeQcItc). 
 
 
 ---
