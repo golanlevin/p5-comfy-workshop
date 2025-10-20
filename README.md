@@ -15,9 +15,10 @@ This is a workshop for combining p5.js and ComfyUI, deployed using cloud-based G
 
 ## ComfyUI Setup 
 
-These are instructions for configuring [RunComfy.com](https://www.runcomfy.com/) to provide stable-diffusion image synthesis for the provided [p5.js sketch example](https://editor.p5js.org/golan/sketches/hDteUa1V_). 
+These are instructions for configuring [RunComfy.com](https://www.runcomfy.com/) to provide stable-diffusion image synthesis for the provided [p5.js sketch example](https://editor.p5js.org/golan/sketches/hDteUa1V_). The typical expectation is that these instructions would be followed by a workshop leader. Click "Details" for more information. 
 
-* **Make** an account at RunComfy.com if you don't already have one. The free "Hobby" trial offers a few credits, but you may need to **load** up your account with a few bucks to get real work done. 
+<details>
+* **Make** an account at RunComfy.com if you don't already have one. The free "Hobby" trial offers a few credits, but you will likely need to **load** up your account with a few bucks to get real work done. 
 * **Go** to [https://www.runcomfy.com/comfyui-workflows](https://www.runcomfy.com/comfyui-workflows).
 * **Select** the *ComfyUI-NodesLoaded* workflow; then *Launch & Build* a Medium machine ($0.99/hour), and click *Launch*. **Hold on**; it will take 3-5 minutes to spin up a server.
 * **Go** to the "**C**" menu in the upper left and select ⚙️ Settings. This will open a Settings control panel interface. 
@@ -31,6 +32,7 @@ These are instructions for configuring [RunComfy.com](https://www.runcomfy.com/)
 * **Go** to the demonstration p5.js app [here](https://editor.p5js.org/golan/sketches/hDteUa1V_). **Paste** the RunComfy server URL into the code for the variable, `const RunComfyURL = `, so that the sketch can find your server. 
 * **Run** the demonstration sketch; you should see a still life of some beetles.
 * Don't forget to **stop** the server once you're done, by pressing the ⏹️ stop button.
+</details>
 
 ---
 
@@ -42,13 +44,15 @@ These are instructions for configuring [RunComfy.com](https://www.runcomfy.com/)
  	* As used in generative art
  	* Some basic code
 2. Introduction to Stable Diffusion
-	* [More like this please](https://github.com/golanlevin/lectures/blob/master/lecture_cnns_and_gans/more-like-this-please.md)
+	* [More like this, please](https://github.com/golanlevin/lectures/blob/master/lecture_cnns_and_gans/more-like-this-please.md)
 3. Main activity
 	* Use a generative design, and a generated caption, to guide a stable diffusion process — effectively treating AI like a 'render layer'. 
 
 ---
 
 ### 1. p5.js Review
+
+<details>
 
 * How some artists are using p5.js for generative art ("more like this please"):
   * [Forecast](https://www.fxhash.xyz/project/forecast) by [Amy Goodchild](https://www.amygoodchild.com/about)
@@ -79,10 +83,13 @@ These are instructions for configuring [RunComfy.com](https://www.runcomfy.com/)
 	* IGNORE THIS: *(Here's a somewhat [overcomplicated example](https://editor.p5js.org/golan/sketches/Vzn7OHiwI).)*
 	* Here's a basic example you could get started with: [a statue of a plinth in a park](https://editor.p5js.org/golan/sketches/0wCeQcItc). 
 
+</details>
 
 ---
 
 ### 2. Introduction to Stable Diffusion
+
+<details>
 
 * [More Like This, Please](https://github.com/golanlevin/lectures/blob/master/lecture_cnns_and_gans/more-like-this-please.md) (With AI)
 	* Contrasting older and newer approaches to generative art
@@ -98,32 +105,38 @@ These are instructions for configuring [RunComfy.com](https://www.runcomfy.com/)
 * **Activity**: Stable Diffusion tinkering (10-15 minutes)
 	* Fiddle with the `generateInputImage()` function in the [Dino Diffusion sketch here](https://editor.p5js.org/golan/sketches/LeAHAOHgZ), seeing how you can make different graphics to guide the synthesis. (Stick to grayscale input.)
 
+</details>
+
 --- 
 
 ### 3. Main Activity
 
 
-
-The instructor will launch a ComfyUI server at RunComfy.com. Now, using a modified version of the [p5.comfyui-helper](https://github.com/gohai/p5.comfyui-helper) by [Gottfried Haider](https://github.com/gohai): 
+The instructor will launch a ComfyUI server at RunComfy.com, using the instructions from Section 1, above. *Now*, 
 
 * We will generate an image in p5.js, along with a caption string
 * We will transmit that image and string over websockets to a ComfyUI server in the cloud; 
 * ComfyUI will guide a stable diffusion process using that image and text prompt, and will then return that image to p5.js. 
 
-![comfy workflow](comfy/workflow_img2img_image.png)
+**The main activity:** 
+
+* **Modify** [**this p5.js template**](https://editor.p5js.org/golan/sketches/hDteUa1V_) (beetles), to **make** a landscape or still life in p5.js, which is interpreted by Stable Diffusion. 
+* Press 's' to save your images and caption. 
+
+Additional links: 
 
 * [p5.js demo: Bugs + img2img](https://editor.p5js.org/golan/sketches/hDteUa1V_)
 * [p5.js generative landscape](https://editor.p5js.org/golan/sketches/Vzn7OHiwI)
 * [p5.js sketch: Landscape + img2img](https://editor.p5js.org/golan/sketches/mxIDsOjo0)
 
-Now: 
+This is the workflow we will be running:
 
-* **Activity**: based on [this p5.js template](https://editor.p5js.org/golan/sketches/hDteUa1V_), **make** a landscape or still life in p5.js, which is interpreted by Stable Diffusion. Consider how you might make a book, such as an *abecedarium*.
-* Press 's' to save your images and caption. 
+![comfy workflow](comfy/workflow_img2img_image.png)
+
 
 ---
 
-### I'd Like to Learn More, Please
+### I'd Like to Learn More
 
 *Time permitting:* There's *lots* more to explore in ComfyUI, including the ability to [swap in different models](https://github.com/golanlevin/60-212/tree/main/lectures/comfy/image_synthesis#using-other-stable-diffusion-models)!
 
