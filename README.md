@@ -18,6 +18,7 @@ This is a workshop for combining p5.js and ComfyUI, deployed using cloud-based G
 These are instructions for configuring [RunComfy.com](https://www.runcomfy.com/) to provide stable-diffusion image synthesis for the provided [p5.js sketch example](https://editor.p5js.org/golan/sketches/hDteUa1V_). The typical expectation is that these instructions would be followed by a workshop leader. Click "Details" for more information. 
 
 <details>
+
 * **Make** an account at RunComfy.com if you don't already have one. The free "Hobby" trial offers a few credits, but you will likely need to **load** up your account with a few bucks to get real work done. 
 * **Go** to [https://www.runcomfy.com/comfyui-workflows](https://www.runcomfy.com/comfyui-workflows).
 * **Select** the *ComfyUI-NodesLoaded* workflow; then *Launch & Build* a Medium machine ($0.99/hour), and click *Launch*. **Hold on**; it will take 3-5 minutes to spin up a server.
@@ -32,6 +33,7 @@ These are instructions for configuring [RunComfy.com](https://www.runcomfy.com/)
 * **Go** to the demonstration p5.js app [here](https://editor.p5js.org/golan/sketches/hDteUa1V_). **Paste** the RunComfy server URL into the code for the variable, `const RunComfyURL = `, so that the sketch can find your server. 
 * **Run** the demonstration sketch; you should see a still life of some beetles.
 * Don't forget to **stop** the server once you're done, by pressing the ⏹️ stop button.
+
 </details>
 
 ---
