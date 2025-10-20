@@ -30,7 +30,7 @@ These are instructions for configuring [RunComfy.com](https://www.runcomfy.com/)
 * **Copy** the URL for the active RunComfy server from your browser window. It should look something like "https://www.runcomfy.com/comfyui/94de82a2-9ac3-4147-b3f4-3652c15d7d96/servers/eae46885-0d2b-4555-9a3c-27263c7a56ab".
 	* If you prefer the old-style (2024) ComfyUI interface, go to Settings→Menu - Disabled.
 	* If you need to export a new workflow for the p5 sketch, be sure to save the workflow with: *Save (API Format)*.
-* **Go** to the demonstration p5.js app [here](https://editor.p5js.org/golan/sketches/hDteUa1V_). **Paste** the RunComfy server URL into the code for the variable, `const RunComfyURL = `, so that the sketch can find your server. 
+* **Go** to the demonstration p5.js app (beetles) [at Editor](https://editor.p5js.org/golan/sketches/hDteUa1V_) or [at OpenProcessing](https://openprocessing.org/sketch/2761003). **Paste** the RunComfy server URL into the code for the variable, `const RunComfyURL = `, so that the sketch can find your server. 
 * **Run** the demonstration sketch; you should see a still life of some beetles.
 * Don't forget to **stop** the server once you're done, by pressing the ⏹️ stop button.
 
@@ -122,13 +122,13 @@ The instructor will launch a ComfyUI server at RunComfy.com, using the instructi
 
 **The main activity:** 
 
-* **Modify** [**this p5.js template**](https://editor.p5js.org/golan/sketches/hDteUa1V_) (beetles), to **make** a landscape or still life in p5.js, which is interpreted by Stable Diffusion. 
+* **Modify** this p5.js template (beetles) [at Editor](https://editor.p5js.org/golan/sketches/hDteUa1V_) or [at OpenProcessing](https://openprocessing.org/sketch/2761003), to **make** a landscape or still life in p5.js, which is interpreted by Stable Diffusion. 
 * Press 's' to save your images and caption. 
 
 Additional links: 
 
 * [p5.js demo: Bugs + img2img](https://editor.p5js.org/golan/sketches/hDteUa1V_)
-* [p5.js generative landscape](https://editor.p5js.org/golan/sketches/Vzn7OHiwI)
+* [p5.js sketch: Statue + img2img](https://editor.p5js.org/golan/sketches/4Zf9cQRhS)
 * [p5.js sketch: Landscape + img2img](https://editor.p5js.org/golan/sketches/mxIDsOjo0)
 
 This is the workflow we will be running:
